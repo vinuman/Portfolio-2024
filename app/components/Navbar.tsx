@@ -10,9 +10,27 @@ const Navbar = () => {
       <div className=" max-w-[1110px] mx-auto flex items-center justify-between w-full">
         <p className=" text-white font-bold text-[32px]">Vinu Cyril</p>
         <div className="flex justify-between w-[180px]">
-          <Image src={github} alt="icon" />
-          <Image src={frontendmentor} alt="icon" />
-          <Image src={linkedin} alt="icon" />
+          <a
+            href={`https://github.com/vinuman`}
+            target="_blank"
+            className=" cursor-pointer  w-8 h-8"
+          >
+            <Image width={100} height={100} src={github} alt="icon" />
+          </a>
+          <a
+            href={`https://www.frontendmentor.io/profile/vinuman`}
+            target="_blank"
+            className=" cursor-pointer w-8 h-8"
+          >
+            <Image width={100} height={100} src={frontendmentor} alt="icon" />
+          </a>
+          <a
+            href={`https://www.linkedin.com/in/vinu-cyril-a3936b154/`}
+            target="_blank"
+            className=" cursor-pointer w-8 h-8"
+          >
+            <Image width={100} height={100} src={linkedin} alt="icon" />
+          </a>
         </div>
       </div>
     </>
