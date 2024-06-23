@@ -30,7 +30,7 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
   return (
     <div className="flex flex-col">
       <a href={link} target="_blank">
-        <div className=" h-[400px] w-[100%] relative border border-primary-200 cursor-pointer">
+        <div className=" h-[400px] w-[100%] relative border border-primary-200 cursor-pointer overflow-hidden max-w-[540px]">
           <Image
             className=" object-cover h-full"
             src={bgImage}
@@ -46,7 +46,7 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
           >
             <Image
               height={1000}
-              className=" object-cover"
+              className=" object-cover border\"
               src={projectImage1}
               alt={`Background image`}
               objectFit="cover"
@@ -69,13 +69,15 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
           </div>
         </div>
       </a>
-      <h3 className=" text-white text-heading-m mt-4 border-b-4 border-primary-200 w-[40%] mb-[10px]">
+      <h3 className=" text-white text-heading-m mt-4 border-b-4 border-primary-200 w-[200px]  mb-[10px]">
         {title}
       </h3>
-      <p className="text-white w-[100%] mb-[20px]">Key Contributions:</p>
+      <p className="text-white w-[100%] max-w-[540px] mb-[20px]">
+        Key Contributions:
+      </p>
       {description.slice(0, isShowMore).map((desc, index) => (
         <li
-          className=" marker:text-primary-200 text-white w-[100%]"
+          className=" marker:text-primary-200 text-white w-[100%] max-w-[540px]"
           key={index}
         >
           {desc}

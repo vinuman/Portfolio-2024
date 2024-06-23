@@ -7,7 +7,7 @@ import linkedin from "@/app/assets/LinkedIn.svg";
 const Navbar = () => {
   return (
     <>
-      <div className=" max-w-[1110px] mx-auto flex items-center justify-between w-full pb-[10px]">
+      <div className="  mx-auto flex items-center justify-between w-full pb-[10px]">
         <p className=" text-white font-bold text-[32px]">
           Vinu Cyril<span className=" text-primary-200">.</span>
         </p>
