@@ -24,7 +24,7 @@ const Main = () => {
             <Button text="Resume" />
           </div>
         </div>
-        <div className=" w-[30%] border-4 border-primary-200 rounded-md">
+        <div className=" w-[30%] border-4 border-primary-200 rounded-md min-w-[300px]">
           <Image
             className=" object-cover h-full"
             src={profile}

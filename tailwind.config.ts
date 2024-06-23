@@ -16,7 +16,7 @@ const config: Config = {
         secondary: {
           100: "var(--color-secondary-dark)",
         },
-        grey: {
+        gray: {
           100: "var(--color-grey-light)",
         },
         neutral: {
