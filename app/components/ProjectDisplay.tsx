@@ -40,7 +40,7 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
           <div
             onMouseOver={() => setFocused1(true)}
             onMouseOut={() => setFocused1(false)}
-            className={` h-[100%] absolute top-12 left-4 z-10 ${
+            className={` h-[100%] absolute top-12 left-4 z-10 transition-all duration-300 ${
               focused1 ? "w-[80%]" : "w-[60%]"
             }`}
           >
@@ -55,7 +55,7 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
           <div
             onMouseOver={() => setFocused2(true)}
             onMouseOut={() => setFocused2(false)}
-            className={`h-[100%] absolute top-4 right-4 ${
+            className={`h-[100%] absolute top-4 right-4 transition-all duration-300 ${
               focused2 ? "w-[80%] z-20" : "w-[60%]"
             }`}
           >
@@ -69,10 +69,10 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
           </div>
         </div>
       </a>
-      <h3 className=" text-white text-heading-m mt-4 border-b-4 border-primary-200 w-[200px]  mb-[10px]">
+      <h3 className=" text-white text-heading-m mt-4 border-b-4 border-primary-200 w-[200px]  mb-[20px]">
         {title}
       </h3>
-      <p className="text-white w-[100%] max-w-[540px] mb-[20px]">
+      <p className="text-white w-[100%] max-w-[540px] mb-[10px] text-[18px]">
         Key Contributions:
       </p>
       {description.slice(0, isShowMore).map((desc, index) => (
