@@ -33,18 +33,74 @@ const Projects = () => {
             Projects
           </h2>
         </div>
-        {/*  PROJECT DISPLAY DIV BEGINS */}
-        <div className=" mt-[40px]">
-          <ProjectDisplay
-            bgImage={bg2}
-            projectImage1={bullbear1}
-            projectImage2={bullbear2}
-            title="BullBear Alpha"
-            techArray={["Next JS", "TypeScript", "GraphQL API", "Tailwind-css"]}
-          />
+        {/*WORK  PROJECT DISPLAY DIV BEGINS */}
+        <div className=" mt-[40px] flex flex-wrap gap-12  w-[100%]">
+          <div className=" w-[45%]">
+            <ProjectDisplay
+              bgImage={bg2}
+              projectImage1={bullbear1}
+              projectImage2={bullbear2}
+              title="BullBear Alpha"
+              description={[
+                "GraphQL Integration: Implemented comprehensive GraphQL API integration, enabling efficient data querying and state management.",
+                "UI Development: Achieved 100% accuracy in translating Figma designs to the live application, maintaining design integrity and providing a seamless user experience.",
+                "Custom Search Functionality: Developed and deployed a robust custom search feature, enhancing the application's usability and performance.",
+                "GraphQL Mutations: Integrated GraphQL mutations to facilitate seamless message sending capabilities, improving user interaction and communication within the app.",
+              ]}
+              techArray={[
+                "Next JS",
+                "TypeScript",
+                "GraphQL API",
+                "Tailwind-css",
+              ]}
+              link="https://www.bullbearalpha.com/"
+            />{" "}
+          </div>
+          <div className="w-[45%]">
+            <ProjectDisplay
+              bgImage={bg2}
+              projectImage1={bullbear1}
+              projectImage2={bullbear2}
+              title="BullBear Alpha"
+              description={[
+                "GraphQL Integration: Implemented comprehensive GraphQL API integration, enabling efficient data querying and state management.",
+                "UI Development: Achieved 100% accuracy in translating Figma designs to the live application, maintaining design integrity and providing a seamless user experience.",
+                "Custom Search Functionality: Developed and deployed a robust custom search feature, enhancing the application's usability and performance.",
+                "GraphQL Mutations: Integrated GraphQL mutations to facilitate seamless message sending capabilities, improving user interaction and communication within the app.",
+              ]}
+              techArray={[
+                "Next JS",
+                "TypeScript",
+                "GraphQL API",
+                "Tailwind-css",
+              ]}
+              link="https://www.bullbearalpha.com/"
+            />
+          </div>
+          <div className="w-[45%]">
+            <ProjectDisplay
+              bgImage={bg2}
+              projectImage1={bullbear1}
+              projectImage2={bullbear2}
+              title="BullBear Alpha"
+              description={[
+                "GraphQL Integration: Implemented comprehensive GraphQL API integration, enabling efficient data querying and state management.",
+                "UI Development: Achieved 100% accuracy in translating Figma designs to the live application, maintaining design integrity and providing a seamless user experience.",
+                "Custom Search Functionality: Developed and deployed a robust custom search feature, enhancing the application's usability and performance.",
+                "GraphQL Mutations: Integrated GraphQL mutations to facilitate seamless message sending capabilities, improving user interaction and communication within the app.",
+              ]}
+              techArray={[
+                "Next JS",
+                "TypeScript",
+                "GraphQL API",
+                "Tailwind-css",
+              ]}
+              link="https://www.bullbearalpha.com/"
+            />
+          </div>
         </div>
 
-        {/*  PROJECT DISPLAY DIV ENDS */}
+        {/*WORK  PROJECT DISPLAY DIV ENDS */}
       </div>
     </>
   );
