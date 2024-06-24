@@ -17,6 +17,8 @@ import podcast1 from "@/app/assets/podcast1.png";
 import podcast2 from "@/app/assets/podcast2.png";
 import finance1 from "@/app/assets/finance1.png";
 import finance2 from "@/app/assets/finance2.png";
+import intralync1 from "@/app/assets/intralync1.png";
+import intralync2 from "@/app/assets/intralync2.png";
 
 const Projects = () => {
   const [work, setWork] = useState(true);
@@ -82,8 +84,8 @@ const Projects = () => {
             <div className="w-[45%]">
               <ProjectDisplay
                 bgImage={bg4}
-                projectImage1={bullbear1}
-                projectImage2={bullbear2}
+                projectImage1={intralync1}
+                projectImage2={intralync2}
                 title="IntraLync"
                 description={[
                   "GraphQL Integration: Implemented comprehensive GraphQL API integration, enabling efficient data querying and state management.",
@@ -97,7 +99,7 @@ const Projects = () => {
                   "GraphQL API",
                   "Chakra-UI",
                 ]}
-                link="https://www.bullbearalpha.com/"
+                isDepolyed={false}
               />
             </div>
             <div className="w-[45%]">
@@ -117,6 +119,7 @@ const Projects = () => {
                   "GraphQL API",
                   "Tailwind-css",
                 ]}
+                isDepolyed={false}
               />
             </div>
           </div>

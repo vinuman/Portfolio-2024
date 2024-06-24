@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface DisplayProps {
   bgImage: StaticImageData | string;
@@ -13,6 +13,7 @@ interface DisplayProps {
   techArray: string[];
   description: string[];
   link?: string;
+  isDepolyed?: boolean;
 }
 
 const ProjectDisplay: React.FC<DisplayProps> = ({
@@ -23,19 +24,33 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
   techArray,
   description,
   link,
+  isDepolyed,
 }) => {
   const [focused1, setFocused1] = useState(false);
   const [focused2, setFocused2] = useState(false);
   const [isShowMore, setIsShowMore] = useState(1);
+  const [deployed, setDeployed] = useState(isDepolyed);
+
+  const handlePop = () => {
+    if (deployed === false) {
+      setDeployed(true);
+    }
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (deployed === true) setDeployed(false);
+    }, 2000);
+  }, [deployed]);
+
   return (
     <div className="flex flex-col">
-      <a href={link} target="_blank">
+      <a onClick={() => handlePop()} href={link} target="_blank">
         <div className=" h-[400px] w-[100%] relative border border-primary-200 cursor-pointer overflow-hidden max-w-[540px]">
           <Image
             className=" object-cover h-full"
             src={bgImage}
             alt={`Background image`}
-            objectFit="cover"
           />
           <div
             onMouseOver={() => setFocused1(true)}
@@ -46,10 +61,9 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
           >
             <Image
               height={1000}
-              className=" object-cover border\"
+              className=" object-cover"
               src={projectImage1}
               alt={`Background image`}
-              objectFit="cover"
             />
           </div>
           <div
@@ -64,8 +78,14 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
               className=" object-cover"
               src={projectImage2}
               alt={`Background image`}
-              objectFit="cover"
             />
+          </div>
+          <div
+            className={`absolute  w-[300px] flex items-center justify-center h-[48px] text-secondary-100 bg-primary-200 text-heading-m z-50 transition-all duration-400 font-bold ${
+              deployed ? "opacity-100 top-2 right-2" : "opacity-0 top-0 right-2"
+            }`}
+          >
+            Yet to be deployed!
           </div>
         </div>
       </a>

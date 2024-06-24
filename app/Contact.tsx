@@ -12,7 +12,7 @@ const Contact = () => {
           </h1>
           <p className=" text-white text-body-l">
             I would love to hear about your project and how I could help. Please
-            fill in the form, and I’ll get back to you as soon as possible.
+            do reach out, and I’ll get back to you as soon as possible.
           </p>
         </div>
         <div className="w-[40%] flex flex-col gap-8">
