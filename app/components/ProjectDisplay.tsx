@@ -46,7 +46,7 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
   return (
     <div className="flex flex-col">
       <a onClick={() => handlePop()} href={link} target="_blank">
-        <div className=" h-[400px] w-[100%] relative border border-primary-200 cursor-pointer overflow-hidden max-w-[540px]">
+        <div className=" lg:h-[400px] h-[200px] w-[100%] relative border border-primary-200 cursor-pointer overflow-hidden lg:max-w-[540px]">
           <Image
             className=" object-cover h-full"
             src={bgImage}
@@ -97,7 +97,7 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
       </p>
       {description.slice(0, isShowMore).map((desc, index) => (
         <li
-          className=" marker:text-primary-200 text-white w-[100%] max-w-[540px]"
+          className=" marker:text-primary-200 text-white w-[100%] max-w-[540px] mb-2"
           key={index}
         >
           {desc}

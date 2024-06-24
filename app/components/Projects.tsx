@@ -6,7 +6,6 @@ import bg2 from "@/app/assets/bg2.jpg";
 import bg3 from "@/app/assets/bg3.jpg";
 import bg4 from "@/app/assets/bg4.jpg";
 import bg5 from "@/app/assets/bg5.jpg";
-import bg6 from "@/app/assets/bg6.jpg";
 import bullbear1 from "@/app/assets/bullbear_cover1.png";
 import bullbear2 from "@/app/assets/bullbear_cover2.png";
 import dendrow1 from "@/app/assets/dendrow1.png";
@@ -28,8 +27,8 @@ const Projects = () => {
   };
   return (
     <>
-      <div ref={ref} className=" mt-[120px]">
-        <div className={`flex items-center gap-[100px]`}>
+      <div ref={ref} className=" md:mt-[120px] max-w-[100%] mt-[60px]">
+        <div className={`flex items-center  gap-[100px]`}>
           <h1
             onClick={() => {
               setWork(true);
@@ -37,8 +36,8 @@ const Projects = () => {
             }}
             className={`text-white   font-bold cursor-pointer ${
               work
-                ? "border-b-8 border-primary-200 text-heading-xl"
-                : " text-heading-l"
+                ? "border-b-8 border-primary-200 lg:text-heading-xl sm:text-heading-l text-heading-m"
+                : " lg:text-heading-l text-heading-m"
             }`}
           >
             Work
@@ -50,8 +49,8 @@ const Projects = () => {
             }}
             className={`text-white font-bold cursor-pointer ${
               !work
-                ? "border-b-8 border-primary-200 text-heading-xl"
-                : "text-heading-l"
+                ? "border-b-8 border-primary-200 lg:text-heading-xl sm:text-heading-l text-heading-m"
+                : "lg:text-heading-l text-heading-m"
             }`}
           >
             Projects
@@ -60,7 +59,7 @@ const Projects = () => {
         {/*WORK  PROJECT DISPLAY DIV BEGINS */}
         {work && (
           <div className=" mt-[40px] flex flex-wrap gap-12  w-[100%]">
-            <div className=" w-[45%]">
+            <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg2}
                 projectImage1={bullbear1}
@@ -81,17 +80,16 @@ const Projects = () => {
                 link="https://www.bullbearalpha.com/"
               />{" "}
             </div>
-            <div className="w-[45%]">
+            <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg4}
                 projectImage1={intralync1}
                 projectImage2={intralync2}
                 title="IntraLync"
                 description={[
-                  "GraphQL Integration: Implemented comprehensive GraphQL API integration, enabling efficient data querying and state management.",
-                  "UI Development: Achieved 100% accuracy in translating Figma designs to the live application, maintaining design integrity and providing a seamless user experience.",
-                  "Custom Search Functionality: Developed and deployed a robust custom search feature, enhancing the application's usability and performance.",
-                  "GraphQL Mutations: Integrated GraphQL mutations to facilitate seamless message sending capabilities, improving user interaction and communication within the app.",
+                  "Custom Hooks for Pagination: Developed custom React hooks to manage the pagination of data fetched from a GraphQL API. This included handling page navigation, data fetching, and state management, providing a smooth and efficient user experience.",
+                  "Code Refactoring: Refactored the existing codebase to follow best practices, making the code more modular, readable, and maintainable. This involved breaking down large components into smaller, reusable components and optimizing the overall architecture.",
+                  "Scalability Improvements: Enhanced the application’s scalability by organizing the code structure to accommodate future growth, including adding new features or handling larger datasets without compromising performance.",
                 ]}
                 techArray={[
                   "React JS",
@@ -102,7 +100,7 @@ const Projects = () => {
                 isDepolyed={false}
               />
             </div>
-            <div className="w-[45%]">
+            <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg3}
                 projectImage1={dendrow1}
@@ -131,7 +129,7 @@ const Projects = () => {
 
         {!work && (
           <div className=" mt-[40px] flex flex-wrap gap-12  w-[100%]">
-            <div className=" w-[45%]">
+            <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg1}
                 projectImage1={crypto1}
@@ -152,7 +150,7 @@ const Projects = () => {
                 link="https://crypto-trackerrr.netlify.app/"
               />{" "}
             </div>
-            <div className="w-[45%]">
+            <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg5}
                 projectImage1={podcast1}
@@ -174,7 +172,7 @@ const Projects = () => {
                 link="https://podcast-react-app-v.netlify.app/"
               />
             </div>
-            <div className="w-[45%]">
+            <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg3}
                 projectImage1={finance1}

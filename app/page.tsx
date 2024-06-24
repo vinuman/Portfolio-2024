@@ -1,17 +1,25 @@
+"use client";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Projects from "./components/Projects";
 import Contact from "./Contact";
+import { useRef } from "react";
 
 export default function Home() {
+  const contactRef = useRef<HTMLDivElement | null>(null);
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <div className="px-[165px] py-[40px] bg-primary-100 min-h-screen">
+      <div className="lg:px-[165px] md:px-[80px] px-[40px] py-[40px] bg-primary-100 min-h-screen mx-auto">
         <Navbar />
-        <Main />
+        <Main scrollToContact={scrollToContact} />
         <Projects />
       </div>
-      <Contact />
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </>
   );
 }
