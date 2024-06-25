@@ -10,7 +10,7 @@ interface MainProps {
 const Main: React.FC<MainProps> = ({ scrollToContact }) => {
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center  md:mt-[80px] mt-[40px]">
+      <div className="flex flex-col md:flex-row items-center  md:mt-[80px] mt-[40px] max-w-[1280px] mx-auto">
         <div className="flex flex-col items-center md:items-start gap-[20px] lg:w-[70%]">
           <h1 className="lg:text-heading-xl md:text-heading-l text-[40px] font-extrabold text-white text-center md:text-left">
             Nice to meet you! I&apos;m{" "}

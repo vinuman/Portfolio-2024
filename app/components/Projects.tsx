@@ -27,7 +27,10 @@ const Projects = () => {
   };
   return (
     <>
-      <div ref={ref} className=" md:mt-[120px] max-w-[100%] mt-[60px]">
+      <div
+        ref={ref}
+        className=" md:mt-[120px] mt-[60px] max-w-[1280px] mx-auto"
+      >
         <div className={`flex items-center  gap-[100px]`}>
           <h1
             onClick={() => {

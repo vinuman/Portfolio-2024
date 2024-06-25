@@ -17,7 +17,7 @@ export default function Home() {
         <Main scrollToContact={scrollToContact} />
         <Projects />
       </div>
-      <div ref={contactRef}>
+      <div className="bg-secondary-100" ref={contactRef}>
         <Contact />
       </div>
     </>

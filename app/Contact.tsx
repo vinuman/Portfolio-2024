@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 const Contact = () => {
   return (
     <>
-      <div className=" bg-secondary-100 lg:px-[165px] md:px-[80px] px-[40px] md:py-[80px] py-[20px] flex flex-col md:flex-row items-center md:justify-between justify-around lg:min-h-[500px] min-h-[400px]">
+      <div className=" bg-secondary-100 lg:px-[165px] md:px-[80px] px-[40px] md:py-[80px] py-[20px] flex flex-col md:flex-row items-center md:justify-between justify-around lg:min-h-[500px] min-h-[400px] mx-auto max-w-[1280px]">
         <div className=" md:w-[40%]]">
           <h1 className=" md:text-heading-m lg:text-heading-xl text-heading-l text-white font-bold mb-[20px] text-center md:text-left">
             Contact
