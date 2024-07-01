@@ -88,7 +88,7 @@ const Projects = () => {
                 bgImage={bg4}
                 projectImage1={intralync1}
                 projectImage2={intralync2}
-                title="IntraLync"
+                title="InterLync"
                 description={[
                   "Custom Hooks for Pagination: Developed custom React hooks to manage the pagination of data fetched from a GraphQL API. This included handling page navigation, data fetching, and state management, providing a smooth and efficient user experience.",
                   "Code Refactoring: Refactored the existing codebase to follow best practices, making the code more modular, readable, and maintainable. This involved breaking down large components into smaller, reusable components and optimizing the overall architecture.",
