@@ -2,7 +2,11 @@ import React from "react";
 import { FcCellPhone, FcFeedback } from "react-icons/fc";
 import Navbar from "./components/Navbar";
 
-const Contact = () => {
+interface ContactProps {
+  scrollToHome?: () => void;
+}
+
+const Contact: React.FC<ContactProps> = ({ scrollToHome }) => {
   return (
     <>
       <div className=" bg-secondary-100 lg:px-[165px] md:px-[80px] px-[40px] md:py-[80px] py-[20px] flex flex-col md:flex-row items-center md:justify-between justify-around lg:min-h-[500px] min-h-[400px] mx-auto max-w-[1280px]">
@@ -31,7 +35,7 @@ const Contact = () => {
         </div>
       </div>
       <div className=" bg-secondary-100 lg:px-[165px] md:px-[100px] px-[40px] py-[20px] border-t border-gray-300">
-        <Navbar />
+        <Navbar scrollToHome={scrollToHome} />
       </div>
     </>
   );

@@ -4,11 +4,18 @@ import github from "@/app/assets/github.svg";
 import frontendmentor from "@/app/assets/frontendmentor.svg";
 import linkedin from "@/app/assets/LinkedIn.svg";
 
-const Navbar = () => {
+interface NavBarProps {
+  scrollToHome?: () => void;
+}
+
+const Navbar: React.FC<NavBarProps> = ({ scrollToHome }) => {
   return (
     <>
       <div className="  mx-auto flex items-center justify-between w-full md:pb-[10px] max-w-[1280px]">
-        <p className=" text-white font-bold text-[32px] hidden sm:block">
+        <p
+          onClick={scrollToHome}
+          className=" text-white font-bold text-[32px] hidden sm:block cursor-pointer"
+        >
           Vinu Cyril<span className=" text-primary-200">.</span>
         </p>
         <div className="flex justify-between sm:w-[180px] w-full">
