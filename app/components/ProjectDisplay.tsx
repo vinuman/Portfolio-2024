@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { StaticImageData } from "next/image";
 import { useState, useEffect } from "react";
+import { Toaster, toast } from "react-hot-toast";
 
 interface DisplayProps {
   bgImage: StaticImageData | string;
@@ -28,20 +29,13 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
 }) => {
   const [focused1, setFocused1] = useState(false);
   const [focused2, setFocused2] = useState(false);
-  const [isShowMore, setIsShowMore] = useState(1);
-  const [deployed, setDeployed] = useState(isDepolyed);
+  const [isShowMore, setIsShowMore] = useState(2);
 
   const handlePop = () => {
-    if (deployed === false) {
-      setDeployed(true);
+    if (isDepolyed === false) {
+      toast.error("Not yet deployed");
     }
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (deployed === true) setDeployed(false);
-    }, 2000);
-  }, [deployed]);
 
   return (
     <div className="flex flex-col">
@@ -80,41 +74,34 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
               alt={`Background image`}
             />
           </div>
-          <div
-            className={`absolute  w-[300px] flex items-center justify-center h-[48px] text-secondary-100 bg-primary-200 text-heading-m z-50 transition-all duration-400 font-bold ${
-              deployed ? "opacity-100 top-2 right-2" : "opacity-0 top-0 right-2"
-            }`}
-          >
-            Yet to be deployed!
-          </div>
         </div>
       </a>
-      <h3 className=" text-white text-heading-m mt-4 border-b-4 border-primary-200 w-[200px]  mb-[20px]">
+      <h3 className=" text-slate-200 text-heading-m mt-4 border-b-4 border-primary-200 w-[200px]  mb-[20px]">
         {title}
       </h3>
-      <p className="text-white w-[100%] max-w-[540px] mb-[10px] text-[18px]">
+      <p className="text-[#E2E8F0] w-[100%] max-w-[540px] mb-[10px] text-[18px]">
         Key Contributions:
       </p>
       {description.slice(0, isShowMore).map((desc, index) => (
         <li
-          className=" marker:text-primary-200 text-white w-[100%] max-w-[540px] mb-2"
+          className=" marker:text-primary-200 text-[#E2E8F0] w-[100%] max-w-[540px] mb-2"
           key={index}
         >
           {desc}
         </li>
       ))}
-      {isShowMore === 1 && (
+      {isShowMore <= 2 && (
         <span
-          onClick={() => setIsShowMore(10000)}
-          className=" border-b border-primary-200 cursor-pointer text-white mb-[10px] w-[100px]"
+          onClick={() => setIsShowMore(1000000)}
+          className=" border-b border-primary-200 cursor-pointer text-slate-200 mb-[10px] w-[100px]"
         >
           read more...
         </span>
       )}
-      {isShowMore !== 1 && (
+      {isShowMore > 2 && (
         <span
-          onClick={() => setIsShowMore(1)}
-          className=" border-b border-primary-200 cursor-pointer text-white mb-[10px] w-[100px]"
+          onClick={() => setIsShowMore(2)}
+          className=" border-b border-primary-200 cursor-pointer text-slate-200 mb-[10px] w-[100px]"
         >
           {" "}
           read less...
@@ -125,12 +112,13 @@ const ProjectDisplay: React.FC<DisplayProps> = ({
         {techArray.map((item, index) => (
           <div
             key={index}
-            className=" bg-primary-200 text-secondary-100 p-1 rounded-md text-[14px]"
+            className=" bg-primary-200 text-[#1A202C] p-1 rounded-md text-[14px] font-medium"
           >
             {item}
           </div>
         ))}
       </div>
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };

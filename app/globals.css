@@ -4,8 +4,25 @@
 
 :root {
   --color-primary-dark: #151515;
-  --color-primary-green: #4ee1a0;
+  --color-primary-green: #44c789;
   --color-secondary-dark: #242424;
   --color-grey-light: #d9d9d9;
   --color-white: #ffffff;
+}
+
+/* tooltipStyles.css */
+.custom-tooltip {
+  background-color: #44c789; /* Dark background */
+  color: #1f2733; /* Light text color */
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all;
+  transition-duration: 300;
+}
+
+.custom-tooltip[data-theme="light"] {
+  background-color: #ffffff; /* Light background for light theme */
+  color: #1a202c; /* Dark text color for light theme */
 }

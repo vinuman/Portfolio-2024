@@ -37,7 +37,7 @@ const Projects = () => {
               setWork(true);
               handleClick();
             }}
-            className={`text-white   font-bold cursor-pointer ${
+            className={`text-slate-200   font-bold cursor-pointer ${
               work
                 ? "border-b-8 border-primary-200 lg:text-heading-xl sm:text-heading-l text-heading-m"
                 : " lg:text-heading-l text-heading-m"
@@ -50,7 +50,7 @@ const Projects = () => {
               setWork(false);
               handleClick();
             }}
-            className={`text-white font-bold cursor-pointer ${
+            className={`text-slate-200 font-bold cursor-pointer ${
               !work
                 ? "border-b-8 border-primary-200 lg:text-heading-xl sm:text-heading-l text-heading-m"
                 : "lg:text-heading-l text-heading-m"
@@ -62,6 +62,29 @@ const Projects = () => {
         {/*WORK  PROJECT DISPLAY DIV BEGINS */}
         {work && (
           <div className=" mt-[40px] flex flex-wrap gap-12  w-[100%]">
+            <div className=" md:w-[45%] w-[100%]">
+              <ProjectDisplay
+                bgImage={bg4}
+                projectImage1={intralync1}
+                projectImage2={intralync2}
+                title="Interlync"
+                description={[
+                  "Refactored the entire codebase to eliminate unnecessary use of the refetch function, streamlining data management from GraphQL.",
+                  "Designed and implemented a new UI, adding features across multiple components to enhance user engagement and functionality.",
+                  "Developed a color system to assist developers in selecting color combinations for dark/night mode, improving accessibility and user experience.",
+                  "Restructured large files into smaller, scalable components for better maintainability and modularity.",
+                  "Updated the UI and numerous front-end features in line with the latest updates from the design and product teams, ensuring consistency with brand standards.",
+                  "Created several custom hooks to manage pagination, data fetching, and search functionality for dropdowns, improving code reusability and organization.",
+                ]}
+                techArray={[
+                  "React JS",
+                  "Javascript",
+                  "GraphQL API",
+                  "Chakra-UI",
+                ]}
+                link="https://www.interlynk.io/"
+              />
+            </div>
             <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg2}
@@ -83,26 +106,7 @@ const Projects = () => {
                 link="https://www.bullbearalpha.com/"
               />{" "}
             </div>
-            <div className=" md:w-[45%] w-[100%]">
-              <ProjectDisplay
-                bgImage={bg4}
-                projectImage1={intralync1}
-                projectImage2={intralync2}
-                title="InterLync"
-                description={[
-                  "Custom Hooks for Pagination: Developed custom React hooks to manage the pagination of data fetched from a GraphQL API. This included handling page navigation, data fetching, and state management, providing a smooth and efficient user experience.",
-                  "Code Refactoring: Refactored the existing codebase to follow best practices, making the code more modular, readable, and maintainable. This involved breaking down large components into smaller, reusable components and optimizing the overall architecture.",
-                  "Scalability Improvements: Enhanced the application’s scalability by organizing the code structure to accommodate future growth, including adding new features or handling larger datasets without compromising performance.",
-                ]}
-                techArray={[
-                  "React JS",
-                  "Javascript",
-                  "GraphQL API",
-                  "Chakra-UI",
-                ]}
-                isDepolyed={false}
-              />
-            </div>
+
             <div className=" md:w-[45%] w-[100%]">
               <ProjectDisplay
                 bgImage={bg3}
